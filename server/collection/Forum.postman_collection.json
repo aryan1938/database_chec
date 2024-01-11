@@ -1,0 +1,1482 @@
+{
+	"info": {
+		"_postman_id": "0398581a-0122-49da-a1b4-732d36ba9b10",
+		"name": "Forum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27450029"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Email",
+											"value": "demo@gmail.coma",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "Hacker0909@@",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/login",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "USER",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Username",
+											"value": "Vishal",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "Hacker0909@@",
+											"type": "text"
+										},
+										{
+											"key": "Email",
+											"value": "demo@gmail.coma",
+											"type": "text"
+										},
+										{
+											"key": "ProfilePicture",
+											"type": "file",
+											"src": "/C:/Users/yuvra/Pictures/1141369.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/add",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "THREAD",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}user/all/thread",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"all",
+										"thread"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "657435e02f9da51c5e372137",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/single/thread",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"single",
+										"thread"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "REPLY",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Content",
+											"value": "this is new content",
+											"type": "text"
+										},
+										{
+											"key": "UserID",
+											"value": "657211893bb50ff95ef1ee7e",
+											"type": "text"
+										},
+										{
+											"key": "PostID",
+											"value": "657211893bb50ff95ef1ee7f",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/add/reply",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"add",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}user/all/reply",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"all",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "65748212de614a6577e1485f",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/single/reply",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"single",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "65748212de614a6577e1485f",
+											"type": "text"
+										},
+										{
+											"key": "Content",
+											"value": "hey bro why u do thsis",
+											"type": "text"
+										},
+										{
+											"key": "UserID",
+											"value": "657211893bb50ff95ef1ee7e",
+											"type": "text"
+										},
+										{
+											"key": "PostID",
+											"value": "65748212de614a6577e1485f",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/update/reply",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"update",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "65748212de614a6577e1485f",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/updatestatus/reply",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"updatestatus",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}user/all/post",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"all",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "657490e69fbc81dff09249e8",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/single/post",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"single",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_id",
+											"value": "6586f048f6fb8b84b42520da",
+											"type": "text"
+										},
+										{
+											"key": "Content",
+											"value": "i modified this post",
+											"type": "text"
+										},
+										{
+											"key": "UserID",
+											"value": "65869993a25699c6e47c2acf",
+											"type": "text"
+										},
+										{
+											"key": "ThreadID",
+											"value": "657435e02f9da51c5e372137",
+											"type": "text"
+										},
+										{
+											"key": "Images",
+											"type": "file",
+											"src": "/C:/Users/yuvra/Pictures/Screenshots/Screenshot (191).png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/update/post",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"update",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateStatus",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "657490e69fbc81dff09249e8",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/updatestatus/post",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"updatestatus",
+										"post"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CATEGORY",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}user/all/category",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"all",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "657512506e2799131ff833d4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/single/category",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"single",
+										"category"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/login",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "USER",
+					"item": [
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "658690bd714d3c23541c4083",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/single",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}user/all/thread",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"all",
+										"thread"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "658690bd714d3c23541c4083",
+											"type": "text"
+										},
+										{
+											"key": "Username",
+											"value": "admin sir",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "ProfilePicture",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/update",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "658690bd714d3c23541c4083",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/status",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "THREAD",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Title",
+											"value": "this is my friend",
+											"type": "text"
+										},
+										{
+											"key": "Content",
+											"value": "hello.com",
+											"type": "text"
+										},
+										{
+											"key": "UserID",
+											"value": "657211893bb50ff95ef1ee7e",
+											"type": "text"
+										},
+										{
+											"key": "CategoryID",
+											"value": "657211893bb50ff95ef1ee7e",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/add/thread",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"add",
+										"thread"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}user/all/thread",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"all",
+										"thread"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "657435e02f9da51c5e372137",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/single/thread",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"single",
+										"thread"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "657435e02f9da51c5e372137",
+											"type": "text"
+										},
+										{
+											"key": "Title",
+											"value": "that is my friend",
+											"type": "text"
+										},
+										{
+											"key": "Content",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "UserID",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "CategoryID",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/update/thread",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"update",
+										"thread"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "657435e02f9da51c5e372137",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/updatestatus/thread",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"updatestatus",
+										"thread"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "REPLY",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Content",
+											"value": "this is new content",
+											"type": "text"
+										},
+										{
+											"key": "UserID",
+											"value": "657211893bb50ff95ef1ee7e",
+											"type": "text"
+										},
+										{
+											"key": "PostID",
+											"value": "657211893bb50ff95ef1ee7f",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/add/reply",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"add",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}user/all/reply",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"all",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "65748212de614a6577e1485f",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/single/reply",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"single",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "65748212de614a6577e1485f",
+											"type": "text"
+										},
+										{
+											"key": "Content",
+											"value": "hey bro why u do thsis",
+											"type": "text"
+										},
+										{
+											"key": "UserID",
+											"value": "657211893bb50ff95ef1ee7e",
+											"type": "text"
+										},
+										{
+											"key": "PostID",
+											"value": "65748212de614a6577e1485f",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/update/reply",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"update",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "65748212de614a6577e1485f",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/updatestatus/reply",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"updatestatus",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Images",
+											"type": "file",
+											"src": "/C:/Users/yuvra/Pictures/Screenshots/Screenshot (192).png"
+										},
+										{
+											"key": "Content",
+											"value": "this is my new cmontent",
+											"type": "text"
+										},
+										{
+											"key": "UserID",
+											"value": "65869993a25699c6e47c2acf",
+											"type": "text"
+										},
+										{
+											"key": "ThreadID",
+											"value": "65869993a25699c6e47c2acf",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/add/post",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"add",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}user/all/post",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"all",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "657490e69fbc81dff09249e8",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/single/post",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"single",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_id",
+											"value": "6586f048f6fb8b84b42520da",
+											"type": "text"
+										},
+										{
+											"key": "Content",
+											"value": "i modified this post",
+											"type": "text"
+										},
+										{
+											"key": "UserID",
+											"value": "65869993a25699c6e47c2acf",
+											"type": "text"
+										},
+										{
+											"key": "ThreadID",
+											"value": "657435e02f9da51c5e372137",
+											"type": "text"
+										},
+										{
+											"key": "Images",
+											"type": "file",
+											"src": "/C:/Users/yuvra/Pictures/Screenshots/Screenshot (191).png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/update/post",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"update",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateStatus",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "657490e69fbc81dff09249e8",
+											"type": "text"
+										},
+										{
+											"key": "Status",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/updatestatus/post",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"updatestatus",
+										"post"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CATEGORY",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "CategoryName",
+											"value": "Python",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/add/category",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"add",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseurl}}user/all/category",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"all",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "657512506e2799131ff833d4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/single/category",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"single",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "657512506e2799131ff833d4",
+											"type": "text"
+										},
+										{
+											"key": "CategoryName",
+											"value": "Java",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/update/category",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"update",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "657512506e2799131ff833d4",
+											"type": "text"
+										},
+										{
+											"key": "CategoryName",
+											"value": "Java",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}user/updatestatus/category",
+									"host": [
+										"{{baseurl}}user"
+									],
+									"path": [
+										"updatestatus",
+										"category"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
